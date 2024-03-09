@@ -1,9 +1,11 @@
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/config/constants/app_theme_manager.dart';
+
 import 'package:todo_app/features/settings_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../../../core/config/app_theme_manager.dart';
 
 class SettingsView extends StatelessWidget {
   final List<String> languageList = ["English", "عربي"];

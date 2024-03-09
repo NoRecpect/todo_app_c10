@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/config/constants/app_theme_manager.dart';
 import 'package:todo_app/features/layout_view.dart';
+import 'package:todo_app/features/login/pages/login_view.dart';
+import 'package:todo_app/features/registure/pages/register_view.dart';
 import 'package:todo_app/features/settings_provider.dart';
 import 'package:todo_app/features/splash/pages/splash_view.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'core/config/app_theme_manager.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -33,6 +36,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashView.routeName: (context) => const SplashView(),
         LayoutView.routeName: (context) => const LayoutView(),
+        LoginView.routeName: (context) =>  LoginView(),
+        RegisterView.routeName: (context) =>  RegisterView(),
       },
     );
   }

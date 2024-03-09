@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:todo_app/features/layout_view.dart';
 import 'package:todo_app/features/settings_provider.dart';
 
-
+import '../../login/pages/login_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -20,9 +20,12 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, LayoutView.routeName);
-    });
+    Timer(
+      const Duration(seconds: 2),
+      () {
+        Navigator.pushReplacementNamed(context, LoginView.routeName);
+      },
+    );
 
     super.initState();
   }
@@ -31,10 +34,10 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     var vm = Provider.of<SettingsProvider>(context);
     var mediaQuery = MediaQuery.of(context).size;
-    return AnnotatedRegion <SystemUiOverlayStyle>(
-         value:  const SystemUiOverlayStyle(
-      statusBarColor:Colors.transparent,
-    ),
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+      ),
       child: Scaffold(
         body: Image.asset(
           vm.isDark()
