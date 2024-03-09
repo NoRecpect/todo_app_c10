@@ -3,8 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/features/settings_provider.dart';
 
-import '../config/constants/app_theme_manager.dart';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../core/config/app_theme_manager.dart';
 
 class LayoutView extends StatelessWidget {
   static String routeName = "Layout View";

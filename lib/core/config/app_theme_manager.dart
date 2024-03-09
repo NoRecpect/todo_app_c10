@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ApplicationThemeManager {
-  static const Color primaryColor =  Color(0XFF5D9CEC);
+  static const Color primaryColor = Color(0XFF5D9CEC);
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0XFFDFECDB),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        toolbarHeight: 120,
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        )),
     bottomAppBarTheme: const BottomAppBarTheme(
       padding: EdgeInsets.zero,
       elevation: 0,
@@ -65,6 +73,15 @@ class ApplicationThemeManager {
   );
   static ThemeData darkTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0XFF060E1E),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      centerTitle: true,
+      toolbarHeight: 120,
+      iconTheme: IconThemeData(
+        color: Color(0XFF060E1E),
+      ),
+    ),
     bottomAppBarTheme: const BottomAppBarTheme(
       padding: EdgeInsets.zero,
       elevation: 0,
@@ -109,7 +126,7 @@ class ApplicationThemeManager {
         color: Colors.white,
       ),
       bodyMedium:
-      TextStyle(fontFamily: "Poppins", fontSize: 18, color: Colors.white),
+          TextStyle(fontFamily: "Poppins", fontSize: 18, color: Colors.white),
       bodySmall: TextStyle(
         fontFamily: "Poppins",
         fontSize: 14,

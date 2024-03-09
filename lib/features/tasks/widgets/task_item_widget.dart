@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/config/constants/app_theme_manager.dart';
 import 'package:todo_app/features/settings_provider.dart';
+import '../../../core/config/app_theme_manager.dart';
 
 class TaskItemWidget extends StatelessWidget {
   const TaskItemWidget({super.key});
